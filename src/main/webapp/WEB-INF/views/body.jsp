@@ -2,3 +2,6 @@
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <h1>hello</h1>
+<form action="#" method="GET">
+	<button>결제하기</button>
+</form>
