@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <h1>hello</h1>
-<form action="#" method="GET">
-	<button>결제하기</button>
-</form>
+<h1>akakakaakakakakakakakakakakak</h1>
