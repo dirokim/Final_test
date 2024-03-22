@@ -20,7 +20,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 @Controller
-@RequestMapping("payment")
+@RequestMapping
 public class PaymentController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -92,14 +92,12 @@ public class PaymentController {
      */
     @RequestMapping(value = "/success", method = RequestMethod.GET)
     public String paymentRequest(HttpServletRequest request, Model model) throws Exception {
-    	model.addAttribute("path","payment/success");
-        return "index";
+        return "success";
     }
 
     @RequestMapping(value = "/checkout", method = RequestMethod.GET)
-    public String index(HttpServletRequest request, Model model) throws Exception {
-    	model.addAttribute("path","payment/checkout");
-        return "index";
+    public String index(HttpServletRequest request, Model model) throws Exception {	
+        return "checkout";
     }
 
     /**
@@ -113,10 +111,6 @@ public class PaymentController {
     public String failPayment(HttpServletRequest request, Model model) throws Exception {
         String failCode = request.getParameter("code");
         String failMessage = request.getParameter("message");
-
-        model.addAttribute("code", failCode);
-        model.addAttribute("message", failMessage);
-        model.addAttribute("path","payment/fail");
-        return "index";
+        return "fail";
     }
 }
