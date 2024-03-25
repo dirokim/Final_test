@@ -13,6 +13,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -96,7 +97,7 @@
 
 				<!-- Main -->
 					<div id="main">
-				
+				<div id='calendar'></div>
 					</div>
 
 				<!-- Sidebar -->
@@ -149,6 +150,29 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			    <script>
+			      document.addEventListener('DOMContentLoaded', function() {
+			          var calendarEl = document.getElementById('calendar');
+			          var calendar = new FullCalendar.Calendar(calendarEl, {
+			            initialView: 'dayGridMonth',
+			               events:[ 
+			                    {
+			                        title:'조민우 김승균 고민효',
+			                        start:'2024-03-26',
+			                        end:'2024-03-29'
+			                    }
+			                    ]
+
+			            
+			            
+			            
+			          });
+			          calendar.render();
+			        });
+
+      
+
+    </script>
 
 	</body>
 </html>
